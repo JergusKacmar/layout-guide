@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const ThemeSwitchComponent = () => {
   const [dark, setDark] = useState(true);
+
+  useEffect(() => {
+    document.documentElement.classList.add("dark");
+  }, []);
 
   return (
     <button
